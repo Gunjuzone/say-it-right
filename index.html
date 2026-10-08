@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Say It Right - pronunciation, stress and syllables</title>
+<meta name="description" content="Classroom game for syllables, word stress and sound pairs. Beginner, Elementary and Pre-Intermediate.">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🗣️</text></svg>">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<!-- ============ setup ============ -->
+<section id="setup" class="screen">
+  <header class="brand">
+    <h1>Say It Right</h1>
+    <p class="tag">Syllables, word stress and sound pairs. Built for class, works on the projector or on phones.</p>
+  </header>
+
+  <div class="panel">
+    <h2>1. Level</h2>
+    <div id="levelPicks" class="picks"></div>
+
+    <h2>2. Game</h2>
+    <div class="picks">
+      <button class="pick" data-mode="syllables">
+        <strong>Count the syllables</strong>
+        <span>ba &middot; na &middot; na = 3</span>
+      </button>
+      <button class="pick" data-mode="stress">
+        <strong>Find the stress</strong>
+        <span>ba &middot; <u>NA</u> &middot; na</span>
+      </button>
+      <button class="pick" data-mode="sounds">
+        <strong>Sound pairs</strong>
+        <span>ship or sheep?</span>
+      </button>
+      <button class="pick" data-mode="mixed">
+        <strong>Mixed</strong>
+        <span>all three</span>
+      </button>
+    </div>
+
+    <h2>3. Teams <span class="hint">optional</span></h2>
+    <div class="picks">
+      <button class="pick" data-teams="1"><strong>Whole class</strong><span>one score</span></button>
+      <button class="pick" data-teams="2"><strong>Two teams</strong><span>take turns</span></button>
+    </div>
+
+    <div class="row">
+      <label for="qty">Questions</label>
+      <select id="qty">
+        <option value="6">6, quick</option>
+        <option value="10" selected>10</option>
+        <option value="16">16, longer</option>
+      </select>
+      <label class="check"><input type="checkbox" id="autoSpeak" checked> Say the word automatically</label>
+    </div>
+
+    <button id="start" class="go">Start</button>
+    <p class="note">Keyboard: <kbd>1</kbd>-<kbd>5</kbd> answer &middot; <kbd>Space</kbd> hear it again &middot; <kbd>Enter</kbd> next</p>
+  </div>
+
+  <footer class="credit">
+    <p>Word lists follow the levels of <em>English File</em>. Unofficial, not affiliated with or endorsed by Oxford University Press.</p>
+  </footer>
+</section>
+
+<!-- ============ play ============ -->
+<section id="play" class="screen hidden">
+  <div class="bar">
+    <span id="progress" class="chip"></span>
+    <span id="turn" class="chip hidden"></span>
+    <span id="scores" class="chip"></span>
+    <button id="quit" class="quit">End</button>
+  </div>
+
+  <div id="card" class="card">
+    <p id="prompt" class="prompt"></p>
+    <div id="display" class="display"></div>
+    <button id="speak" class="speak" title="Hear the word (Space)">Hear it</button>
+    <div id="options" class="options"></div>
+    <p id="feedback" class="feedback"></p>
+    <button id="next" class="go hidden">Next</button>
+  </div>
+</section>
+
+<!-- ============ results ============ -->
+<section id="results" class="screen hidden">
+  <div class="panel">
+    <h2 id="resultHead"></h2>
+    <p id="resultLine" class="big"></p>
+    <div id="review"></div>
+    <div class="row">
+      <button id="again" class="go">Play again</button>
+      <button id="change" class="ghost">Change level or game</button>
+    </div>
+  </div>
+</section>
+
+<script src="words.js"></script>
+<script src="app.js"></script>
+</body>
+</html>

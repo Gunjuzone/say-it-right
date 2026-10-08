@@ -1,0 +1,165 @@
+/* Word banks for Say It Right.
+ *
+ * Levels follow English File Beginner / Elementary / Pre-Intermediate.
+ * Each entry: syl = syllable split (must join to the spelling), stress = index
+ * of the stressed syllable (0-based). Single-syllable words use stress 0.
+ * British English stress throughout, as in English File.
+ *
+ * Teachers: edit freely. npm-free; validate with `node validate.js`.
+ */
+
+const WORDS = {
+  beginner: [
+    { w: 'book', syl: ['book'], stress: 0 },
+    { w: 'pen', syl: ['pen'], stress: 0 },
+    { w: 'house', syl: ['house'], stress: 0 },
+    { w: 'phone', syl: ['phone'], stress: 0 },
+    { w: 'chair', syl: ['chair'], stress: 0 },
+    { w: 'bread', syl: ['bread'], stress: 0 },
+    { w: 'table', syl: ['ta', 'ble'], stress: 0 },
+    { w: 'window', syl: ['win', 'dow'], stress: 0 },
+    { w: 'teacher', syl: ['tea', 'cher'], stress: 0 },
+    { w: 'student', syl: ['stu', 'dent'], stress: 0 },
+    { w: 'coffee', syl: ['co', 'ffee'], stress: 0 },
+    { w: 'water', syl: ['wa', 'ter'], stress: 0 },
+    { w: 'city', syl: ['ci', 'ty'], stress: 0 },
+    { w: 'doctor', syl: ['doc', 'tor'], stress: 0 },
+    { w: 'sister', syl: ['sis', 'ter'], stress: 0 },
+    { w: 'brother', syl: ['bro', 'ther'], stress: 0 },
+    { w: 'mother', syl: ['mo', 'ther'], stress: 0 },
+    { w: 'father', syl: ['fa', 'ther'], stress: 0 },
+    { w: 'seven', syl: ['se', 'ven'], stress: 0 },
+    { w: 'Monday', syl: ['Mon', 'day'], stress: 0 },
+    { w: 'April', syl: ['A', 'pril'], stress: 0 },
+    { w: 'chicken', syl: ['chi', 'cken'], stress: 0 },
+    { w: 'orange', syl: ['o', 'range'], stress: 0 },
+    { w: 'pizza', syl: ['pi', 'zza'], stress: 0 },
+    { w: 'China', syl: ['Chi', 'na'], stress: 0 },
+    { w: 'Russia', syl: ['Ru', 'ssia'], stress: 0 },
+    { w: 'hotel', syl: ['ho', 'tel'], stress: 1 },
+    { w: 'guitar', syl: ['gui', 'tar'], stress: 1 },
+    { w: 'police', syl: ['po', 'lice'], stress: 1 },
+    { w: 'hello', syl: ['he', 'llo'], stress: 1 },
+    { w: 'goodbye', syl: ['good', 'bye'], stress: 1 },
+    { w: 'thirteen', syl: ['thir', 'teen'], stress: 1 },
+    { w: 'eleven', syl: ['e', 'le', 'ven'], stress: 1 },
+    { w: 'banana', syl: ['ba', 'na', 'na'], stress: 1 },
+    { w: 'computer', syl: ['com', 'pu', 'ter'], stress: 1 },
+    { w: 'family', syl: ['fa', 'mi', 'ly'], stress: 0 },
+  ],
+
+  elementary: [
+    { w: 'breakfast', syl: ['break', 'fast'], stress: 0 },
+    { w: 'favourite', syl: ['fa', 'vou', 'rite'], stress: 0 },
+    { w: 'beautiful', syl: ['beau', 'ti', 'ful'], stress: 0 },
+    { w: 'difficult', syl: ['di', 'ffi', 'cult'], stress: 0 },
+    { w: 'restaurant', syl: ['res', 'tau', 'rant'], stress: 0 },
+    { w: 'holiday', syl: ['ho', 'li', 'day'], stress: 0 },
+    { w: 'Saturday', syl: ['Sa', 'tur', 'day'], stress: 0 },
+    { w: 'hospital', syl: ['hos', 'pi', 'tal'], stress: 0 },
+    { w: 'medicine', syl: ['me', 'di', 'cine'], stress: 0 },
+    { w: 'vegetable', syl: ['ve', 'ge', 'table'], stress: 0 },
+    { w: 'exercise', syl: ['ex', 'er', 'cise'], stress: 0 },
+    { w: 'newspaper', syl: ['news', 'pa', 'per'], stress: 0 },
+    { w: 'grandmother', syl: ['grand', 'mo', 'ther'], stress: 0 },
+    { w: 'comfortable', syl: ['com', 'for', 'table'], stress: 0 },
+    { w: 'interesting', syl: ['in', 'te', 'res', 'ting'], stress: 0 },
+    { w: 'expensive', syl: ['ex', 'pen', 'sive'], stress: 1 },
+    { w: 'important', syl: ['im', 'por', 'tant'], stress: 1 },
+    { w: 'tomorrow', syl: ['to', 'mo', 'rrow'], stress: 1 },
+    { w: 'together', syl: ['to', 'ge', 'ther'], stress: 1 },
+    { w: 'remember', syl: ['re', 'mem', 'ber'], stress: 1 },
+    { w: 'arrive', syl: ['a', 'rrive'], stress: 1 },
+    { w: 'decide', syl: ['de', 'cide'], stress: 1 },
+    { w: 'invite', syl: ['in', 'vite'], stress: 1 },
+    { w: 'prefer', syl: ['pre', 'fer'], stress: 1 },
+    { w: 'relax', syl: ['re', 'lax'], stress: 1 },
+    { w: 'begin', syl: ['be', 'gin'], stress: 1 },
+    { w: 'afternoon', syl: ['af', 'ter', 'noon'], stress: 2 },
+    { w: 'understand', syl: ['un', 'der', 'stand'], stress: 2 },
+    { w: 'engineer', syl: ['en', 'gi', 'neer'], stress: 2 },
+    { w: 'Japanese', syl: ['Ja', 'pa', 'nese'], stress: 2 },
+    { w: 'supermarket', syl: ['su', 'per', 'mar', 'ket'], stress: 0 },
+    { w: 'dictionary', syl: ['dic', 'tio', 'na', 'ry'], stress: 0 },
+  ],
+
+  preint: [
+    { w: 'photograph', syl: ['pho', 'to', 'graph'], stress: 0 },
+    { w: 'photographer', syl: ['pho', 'to', 'gra', 'pher'], stress: 1 },
+    { w: 'photographic', syl: ['pho', 'to', 'gra', 'phic'], stress: 2 },
+    { w: 'economy', syl: ['e', 'co', 'no', 'my'], stress: 1 },
+    { w: 'economic', syl: ['e', 'co', 'no', 'mic'], stress: 2 },
+    { w: 'politics', syl: ['po', 'li', 'tics'], stress: 0 },
+    { w: 'political', syl: ['po', 'li', 'ti', 'cal'], stress: 1 },
+    { w: 'technology', syl: ['tech', 'no', 'lo', 'gy'], stress: 1 },
+    { w: 'technological', syl: ['tech', 'no', 'lo', 'gi', 'cal'], stress: 2 },
+    { w: 'information', syl: ['in', 'for', 'ma', 'tion'], stress: 2 },
+    { w: 'education', syl: ['e', 'du', 'ca', 'tion'], stress: 2 },
+    { w: 'competition', syl: ['com', 'pe', 'ti', 'tion'], stress: 2 },
+    { w: 'communication', syl: ['co', 'mmu', 'ni', 'ca', 'tion'], stress: 3 },
+    { w: 'pronunciation', syl: ['pro', 'nun', 'ci', 'a', 'tion'], stress: 3 },
+    { w: 'decision', syl: ['de', 'ci', 'sion'], stress: 1 },
+    { w: 'television', syl: ['te', 'le', 'vi', 'sion'], stress: 0 },
+    { w: 'opportunity', syl: ['o', 'ppor', 'tu', 'ni', 'ty'], stress: 2 },
+    { w: 'necessary', syl: ['ne', 'ce', 'ssa', 'ry'], stress: 0 },
+    { w: 'environment', syl: ['en', 'vi', 'ron', 'ment'], stress: 1 },
+    { w: 'advertisement', syl: ['ad', 'ver', 'tise', 'ment'], stress: 1 },
+    { w: 'interview', syl: ['in', 'ter', 'view'], stress: 0 },
+    { w: 'experience', syl: ['ex', 'pe', 'ri', 'ence'], stress: 1 },
+    { w: 'independent', syl: ['in', 'de', 'pen', 'dent'], stress: 2 },
+    { w: 'responsible', syl: ['re', 'spon', 'si', 'ble'], stress: 1 },
+    { w: 'successful', syl: ['suc', 'cess', 'ful'], stress: 1 },
+    { w: 'unemployed', syl: ['un', 'em', 'ployed'], stress: 2 },
+    { w: 'particularly', syl: ['par', 'ti', 'cu', 'lar', 'ly'], stress: 1 },
+    { w: 'immediately', syl: ['i', 'mme', 'dia', 'te', 'ly'], stress: 1 },
+    { w: 'certificate', syl: ['cer', 'ti', 'fi', 'cate'], stress: 1 },
+    { w: 'comfortable', syl: ['com', 'for', 'table'], stress: 0 },
+    { w: 'vocabulary', syl: ['vo', 'ca', 'bu', 'la', 'ry'], stress: 1 },
+    { w: 'temperature', syl: ['tem', 'pe', 'ra', 'ture'], stress: 0 },
+  ],
+};
+
+/* Sound Bank pairs, in the style of English File's sound pictures.
+ * Each pair: two words that differ by one sound, with the symbol and the
+ * keyword English File uses for that sound.
+ */
+const PAIRS = {
+  beginner: [
+    { a: 'ship', b: 'sheep', soundA: ['/ɪ/', 'fish'], soundB: ['/iː/', 'tree'] },
+    { a: 'live', b: 'leave', soundA: ['/ɪ/', 'fish'], soundB: ['/iː/', 'tree'] },
+    { a: 'bad', b: 'bed', soundA: ['/æ/', 'cat'], soundB: ['/e/', 'egg'] },
+    { a: 'man', b: 'men', soundA: ['/æ/', 'cat'], soundB: ['/e/', 'egg'] },
+    { a: 'cat', b: 'cut', soundA: ['/æ/', 'cat'], soundB: ['/ʌ/', 'up'] },
+    { a: 'hat', b: 'hot', soundA: ['/æ/', 'cat'], soundB: ['/ɒ/', 'clock'] },
+    { a: 'full', b: 'fool', soundA: ['/ʊ/', 'bull'], soundB: ['/uː/', 'boot'] },
+    { a: 'this', b: 'these', soundA: ['/ɪ/', 'fish'], soundB: ['/iː/', 'tree'] },
+  ],
+  elementary: [
+    { a: 'think', b: 'sink', soundA: ['/θ/', 'thumb'], soundB: ['/s/', 'snake'] },
+    { a: 'van', b: 'ban', soundA: ['/v/', 'vase'], soundB: ['/b/', 'bag'] },
+    { a: 'work', b: 'walk', soundA: ['/ɜː/', 'bird'], soundB: ['/ɔː/', 'horse'] },
+    { a: 'chair', b: 'share', soundA: ['/tʃ/', 'chess'], soundB: ['/ʃ/', 'shower'] },
+    { a: 'light', b: 'right', soundA: ['/l/', 'leg'], soundB: ['/r/', 'robot'] },
+    { a: 'cheap', b: 'jeep', soundA: ['/tʃ/', 'chess'], soundB: ['/dʒ/', 'jazz'] },
+    { a: 'sing', b: 'thing', soundA: ['/s/', 'snake'], soundB: ['/θ/', 'thumb'] },
+    { a: 'boat', b: 'bought', soundA: ['/əʊ/', 'phone'], soundB: ['/ɔː/', 'horse'] },
+  ],
+  preint: [
+    { a: 'they', b: 'day', soundA: ['/ð/', 'mother'], soundB: ['/d/', 'dog'] },
+    { a: 'hear', b: 'hair', soundA: ['/ɪə/', 'ear'], soundB: ['/eə/', 'chair'] },
+    { a: 'thought', b: 'taught', soundA: ['/θ/', 'thumb'], soundB: ['/t/', 'tie'] },
+    { a: 'pleasure', b: 'pressure', soundA: ['/ʒ/', 'television'], soundB: ['/ʃ/', 'shower'] },
+    { a: 'won', b: 'want', soundA: ['/ʌ/', 'up'], soundB: ['/ɒ/', 'clock'] },
+    { a: 'bird', b: 'beard', soundA: ['/ɜː/', 'bird'], soundB: ['/ɪə/', 'ear'] },
+    { a: 'advice', b: 'advise', soundA: ['/s/', 'snake'], soundB: ['/z/', 'zebra'] },
+    { a: 'yet', b: 'jet', soundA: ['/j/', 'yacht'], soundB: ['/dʒ/', 'jazz'] },
+  ],
+};
+
+const LEVELS = [
+  { id: 'beginner', name: 'Beginner' },
+  { id: 'elementary', name: 'Elementary' },
+  { id: 'preint', name: 'Pre-Intermediate' },
+];
+
+if (typeof module !== 'undefined') module.exports = { WORDS, PAIRS, LEVELS };
