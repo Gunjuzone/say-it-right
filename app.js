@@ -296,8 +296,7 @@
       b.className = 'pick';
       b.type = 'button';
       b.dataset.level = l.id;
-      const n = WORDS[l.id].length;
-      b.innerHTML = `<strong>${l.name}</strong><span class="pick-sub">${n} words</span>`;
+      b.innerHTML = `<strong>${l.name}</strong>`;
       box.appendChild(b);
     });
   }

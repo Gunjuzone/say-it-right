@@ -32,6 +32,7 @@ body {
   color: var(--ink);
   font-family: var(--ui);
   font-weight: 350;
+  font-size: 19px;
   line-height: 1.5;
 }
 
@@ -62,7 +63,7 @@ body {
 }
 
 .tag {
-  font-size: clamp(15px, 2.4vw, 19px);
+  font-size: clamp(19px, 2.5vw, 24px);
   color: var(--ink-soft);
   margin: 12px 0 0;
   max-width: 46ch;
@@ -85,7 +86,7 @@ body {
 .term .b.l { width: 17px; height: 17px; background: var(--amber); }
 .term h2 {
   font-family: var(--display);
-  font-size: clamp(21px, 3.4vw, 27px);
+  font-size: clamp(25px, 3.6vw, 31px);
   font-variation-settings: "wdth" 90, "wght" 700;
   margin: 0 0 6px; display: flex; flex-wrap: wrap; align-items: baseline; gap: 9px;
 }
@@ -93,11 +94,11 @@ body {
   font-family: "Segoe UI", system-ui, sans-serif;
   font-size: 0.62em; font-weight: 400; color: var(--magenta);
 }
-.term p { margin: 0 0 5px; font-size: 16px; color: var(--ink-soft); }
+.term p { margin: 0 0 6px; font-size: 19px; color: var(--ink-soft); }
 .term p b { color: var(--ink); font-weight: 600; }
 .term .ru {
   font-family: "Segoe UI", system-ui, sans-serif;
-  font-size: 15px; color: var(--ink-soft);
+  font-size: 18px; color: var(--ink-soft);
 }
 
 /* ---------------- setup ---------------- */
@@ -106,7 +107,7 @@ body {
 fieldset { border: 0; padding: 0; margin: 0; }
 
 legend {
-  font-size: clamp(17px, 2.6vw, 21px);
+  font-size: clamp(22px, 2.9vw, 27px);
   font-weight: 500;
   color: var(--ink);
   padding: 0 0 12px;
@@ -123,10 +124,10 @@ legend {
   border: 2px solid transparent;
   border-bottom: 4px solid var(--edge);
   border-radius: 16px;
-  font-family: var(--ui); font-size: 17px; color: var(--ink);
+  font-family: var(--ui); font-size: 22px; color: var(--ink);
 }
 .pick strong { font-weight: 600; }
-.pick-sub { font-size: 14px; color: var(--ink-soft); }
+.pick-sub { font-size: 17px; color: var(--ink-soft); }
 .pick:hover { background: #e4ebfa; }
 .pick[aria-pressed="true"] {
   background: #fff;
@@ -147,19 +148,19 @@ legend {
 }
 
 .settings { display: flex; flex-wrap: wrap; align-items: center; gap: 10px 20px; }
-.settings label { font-size: 16px; color: var(--ink-soft); }
+.settings label { font-size: 19px; color: var(--ink-soft); }
 .switch { display: inline-flex; align-items: center; gap: 8px; }
 .switch input { width: 18px; height: 18px; accent-color: var(--blue); }
 
 select {
-  font-family: var(--ui); font-size: 16px; color: var(--ink);
+  font-family: var(--ui); font-size: 19px; color: var(--ink);
   background: var(--panel); border: 1px solid var(--edge);
   border-radius: 10px; padding: 9px 12px;
 }
 
 .go {
   align-self: flex-start;
-  font-family: var(--ui); font-size: 19px; font-weight: 600;
+  font-family: var(--ui); font-size: 23px; font-weight: 600;
   color: #fff; background: var(--blue);
   border: 0; border-bottom: 4px solid #0e2f9c;
   border-radius: 14px; padding: 16px 34px; cursor: pointer;
@@ -168,32 +169,32 @@ select {
 .go:active { transform: translateY(2px); border-bottom-width: 2px; }
 
 .ghost {
-  font-family: var(--ui); font-size: 17px; color: var(--ink-soft);
+  font-family: var(--ui); font-size: 20px; color: var(--ink-soft);
   background: transparent; border: 2px solid var(--edge);
   border-radius: 14px; padding: 14px 24px; cursor: pointer;
 }
 .ghost:hover { border-color: var(--ink-soft); color: var(--ink); }
 
-.keys { font-size: 14px; color: var(--ink-soft); margin: 0; }
+.keys { font-size: 17px; color: var(--ink-soft); margin: 0; }
 kbd {
-  font-family: var(--ui); font-size: 13px;
+  font-family: var(--ui); font-size: 15px;
   background: var(--panel); border: 1px solid var(--edge);
   border-bottom-width: 2px; border-radius: 6px; padding: 2px 7px;
 }
 
-.credit { margin-top: 44px; font-size: 13px; color: var(--ink-soft); max-width: 60ch; }
+.credit { margin-top: 44px; font-size: 15px; color: var(--ink-soft); max-width: 60ch; }
 .credit p { margin: 0; }
 
 /* ---------------- play ---------------- */
 .statusbar { display: flex; align-items: center; gap: 20px; flex-wrap: wrap; margin-bottom: 22px; }
-.status { font-size: 15px; color: var(--ink-soft); }
+.status { font-size: 18px; color: var(--ink-soft); }
 .status + .status::before { content: ""; }
 .turn {
   color: #fff; background: var(--magenta);
-  border-radius: 999px; padding: 4px 14px; font-weight: 500;
+  border-radius: 999px; padding: 5px 16px; font-weight: 500;
 }
 .quit {
-  margin-left: auto; font-family: var(--ui); font-size: 15px;
+  margin-left: auto; font-family: var(--ui); font-size: 18px;
   color: var(--ink-soft); background: transparent;
   border: 0; border-bottom: 1px solid var(--edge);
   padding: 2px 0; cursor: pointer;
@@ -203,7 +204,7 @@ kbd {
 .stage { text-align: center; padding: 6px 0 4px; }
 
 .ask {
-  font-size: clamp(17px, 3vw, 24px);
+  font-size: clamp(21px, 3.2vw, 29px);
   font-weight: 400; color: var(--ink-soft);
   margin: 0 0 26px; max-width: 34ch; margin-inline: auto;
 }
@@ -216,17 +217,17 @@ kbd {
 }
 .col { display: flex; flex-direction: column; align-items: center; gap: clamp(8px, 1.4vw, 16px); }
 .bubble {
-  width: clamp(12px, 2.2vw, 20px); height: clamp(12px, 2.2vw, 20px);
+  width: clamp(14px, 2.4vw, 23px); height: clamp(14px, 2.4vw, 23px);
   border-radius: 50%; background: var(--edge);
   transition: none;
 }
 .col.strong .bubble {
-  width: clamp(26px, 5vw, 46px); height: clamp(26px, 5vw, 46px);
+  width: clamp(31px, 5.6vw, 54px); height: clamp(31px, 5.6vw, 54px);
   background: var(--amber);
 }
 .syl {
   font-family: var(--display);
-  font-size: clamp(38px, 9vw, 92px);
+  font-size: clamp(46px, 10.5vw, 108px);
   font-variation-settings: "wdth" 88, "wght" 700;
   line-height: 0.95; color: var(--ink);
 }
@@ -234,7 +235,7 @@ kbd {
 .col.quiet .syl { color: var(--ink-soft); font-variation-settings: "wdth" 88, "wght" 500; }
 .symbol {
   font-family: var(--display);
-  font-size: clamp(56px, 14vw, 128px);
+  font-size: clamp(66px, 15vw, 142px);
   font-variation-settings: "wdth" 90, "wght" 700;
   color: var(--magenta); line-height: 1;
 }
@@ -242,13 +243,13 @@ kbd {
 /* the oOo notation teachers already use */
 .pattern {
   font-family: var(--display);
-  font-size: clamp(20px, 3.4vw, 30px);
+  font-size: clamp(25px, 3.8vw, 36px);
   letter-spacing: 0.22em; color: var(--ink-soft);
   min-height: 1.4em; margin: 14px 0 0;
 }
 
 .again {
-  font-family: var(--ui); font-size: 16px; color: var(--blue);
+  font-family: var(--ui); font-size: 19px; color: var(--blue);
   background: transparent; border: 2px solid var(--edge);
   border-radius: 999px; padding: 9px 22px; margin: 18px 0 0; cursor: pointer;
 }
@@ -261,15 +262,15 @@ kbd {
 }
 .key {
   font-family: var(--display);
-  font-size: clamp(24px, 4.6vw, 40px);
+  font-size: clamp(29px, 5.2vw, 46px);
   font-variation-settings: "wdth" 90, "wght" 700;
   color: var(--ink); background: var(--panel);
   border: 2px solid var(--edge); border-bottom-width: 6px;
-  border-radius: 18px; padding: 18px 26px 14px;
-  min-width: clamp(90px, 13vw, 132px); cursor: pointer;
+  border-radius: 18px; padding: 20px 30px 16px;
+  min-width: clamp(104px, 14vw, 150px); cursor: pointer;
 }
 .key .tap {
-  display: block; font-family: var(--ui); font-size: 12px; font-weight: 400;
+  display: block; font-family: var(--ui); font-size: 15px; font-weight: 400;
   color: var(--ink-soft); margin-bottom: 5px;
 }
 .key:hover:not(:disabled) { background: #e4ebfa; border-color: #bfcdeb; }
@@ -287,7 +288,7 @@ kbd {
 .key.wrong .tap { color: #ffd9d5; }
 
 .verdict {
-  text-align: center; font-size: clamp(17px, 2.8vw, 22px);
+  text-align: center; font-size: clamp(20px, 3vw, 27px);
   margin: 26px auto 0; max-width: 56ch; min-height: 2.2em;
 }
 .verdict strong { font-weight: 600; }
@@ -300,13 +301,13 @@ kbd {
 .scorecard { text-align: center; padding: 20px 0 10px; }
 .scorecard h2 {
   font-family: var(--display);
-  font-size: clamp(32px, 7vw, 62px);
+  font-size: clamp(38px, 7.4vw, 70px);
   font-variation-settings: "wdth" 92, "wght" 750;
   margin: 0; line-height: 1;
 }
-.tally { font-size: clamp(18px, 3vw, 24px); color: var(--ink-soft); margin: 14px 0 0; }
+.tally { font-size: clamp(21px, 3.2vw, 28px); color: var(--ink-soft); margin: 14px 0 0; }
 
-.review-head { font-size: 18px; font-weight: 500; margin: 36px 0 14px; }
+.review-head { font-size: 21px; font-weight: 500; margin: 36px 0 14px; }
 .review { display: flex; flex-direction: column; }
 .row {
   display: flex; align-items: baseline; gap: 14px; flex-wrap: wrap;
@@ -314,14 +315,14 @@ kbd {
 }
 .review .row:last-child { border-bottom: 1px solid var(--edge); }
 .row .w {
-  font-family: var(--display); font-size: 25px;
+  font-family: var(--display); font-size: 30px;
   font-variation-settings: "wdth" 90, "wght" 700;
 }
 .row .pat {
-  font-family: var(--display); font-size: 18px;
+  font-family: var(--display); font-size: 22px;
   letter-spacing: 0.2em; color: var(--amber);
 }
-.row .how { font-size: 15px; color: var(--ink-soft); }
+.row .how { font-size: 18px; color: var(--ink-soft); }
 .review:empty + .endbuttons { margin-top: 10px; }
 
 .endbuttons { display: flex; flex-wrap: wrap; gap: 14px; justify-content: center; margin-top: 34px; }
