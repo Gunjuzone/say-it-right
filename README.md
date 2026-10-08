@@ -12,6 +12,10 @@ The design follows how stress is taught at the board: syllables are beats, each 
 gets a bubble, and the strong beat is the big one. The answer screen also shows the
 `oOo` pattern, so students read the shape of the word as well as the letters.
 
+Before the games there is a short bilingual reminder of what a **syllable** (слог)
+and **stress** (ударение) are, in English and Russian, so students who need the
+Russian can read it without being taught the terms twice.
+
 ## The three games
 
 | Game | What students do | Teaches |
@@ -32,6 +36,8 @@ are listed again on the results screen for drilling.
 - **Keyboard:** <kbd>1</kbd>–<kbd>5</kbd> to answer, <kbd>Space</kbd> to hear the word
   again, <kbd>Enter</kbd> for the next question. Useful when the laptop is at the front.
 - **Phones:** students can open the same link and play individually. The layout adapts.
+- **New groups:** leave the page on the setup screen for a minute so students can read
+  the syllable and stress definitions at the top before the first round.
 - **Audio** uses the browser's built-in voices and prefers a British English voice.
   If a device has no English voice the game still works; the word stays on screen and
   you model the pronunciation yourself.

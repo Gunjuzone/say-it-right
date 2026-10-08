@@ -68,6 +68,38 @@ body {
   max-width: 46ch;
 }
 
+
+/* ---------------- bilingual primer ----------------
+ * Students meet the two words "syllable" and "stress" before they play, in
+ * English and Russian. Russian uses the system stack because the display and
+ * UI faces carry no Cyrillic. */
+.primer {
+  display: grid; grid-template-columns: repeat(auto-fit, minmax(290px, 1fr));
+  gap: 14px; margin: 0 0 34px;
+  padding: 20px 0 0; border-top: 2px solid var(--edge);
+}
+.term { max-width: 52ch; }
+.term .beats { display: flex; align-items: flex-end; gap: 6px; height: 18px; margin-bottom: 10px; }
+.term .b { display: block; border-radius: 50%; background: var(--edge); }
+.term .b.s { width: 8px; height: 8px; }
+.term .b.l { width: 17px; height: 17px; background: var(--amber); }
+.term h2 {
+  font-family: var(--display);
+  font-size: clamp(21px, 3.4vw, 27px);
+  font-variation-settings: "wdth" 90, "wght" 700;
+  margin: 0 0 6px; display: flex; flex-wrap: wrap; align-items: baseline; gap: 9px;
+}
+.ru-term {
+  font-family: "Segoe UI", system-ui, sans-serif;
+  font-size: 0.62em; font-weight: 400; color: var(--magenta);
+}
+.term p { margin: 0 0 5px; font-size: 16px; color: var(--ink-soft); }
+.term p b { color: var(--ink); font-weight: 600; }
+.term .ru {
+  font-family: "Segoe UI", system-ui, sans-serif;
+  font-size: 15px; color: var(--ink-soft);
+}
+
 /* ---------------- setup ---------------- */
 .setup { display: flex; flex-direction: column; gap: 26px; }
 
