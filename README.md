@@ -8,9 +8,11 @@ needs no installation and no internet once the page has loaded.
 
 ![The stress game revealing the strong beat in "photographic"](docs/screenshot.png)
 
-The design follows how stress is taught at the board: syllables are beats, each beat
-gets a bubble, and the strong beat is the big one. The answer screen also shows the
-`oOo` pattern, so students read the shape of the word as well as the letters.
+The design follows how stress is marked at the board: each syllable gets a bubble and
+the stressed one is the big bubble. The answer also prints the `oOo` pattern, so
+students read the shape of the word as well as the letters. On screen the game uses
+the words students meet in the book, *syllable* and *stress*; clapping is kept as the
+explanation rather than as a label.
 
 Before the games there is a short bilingual reminder of what a **syllable** (слог)
 and **stress** (ударение) are, in English and Russian, so students who need the
@@ -20,8 +22,8 @@ Russian can read it without being taught the terms twice.
 
 | Game | What students do | Teaches |
 |---|---|---|
-| **Count the beats** | Hear and see a word, choose how many syllables | Syllable awareness |
-| **Find the strong beat** | The word appears in syllables, choose the stressed one | Word stress |
+| **Count the syllables** | Hear and see a word, choose how many syllables | Syllable awareness |
+| **Find the stress** | The word appears in syllables, choose the stressed one | Word stress |
 | **Tell the sounds apart** | A sound is shown, for example /iː/ as in "tree", choose the word that has it | Minimal pairs, vowel and consonant contrasts |
 | **Mixed** | All three, alternating | Review |
 

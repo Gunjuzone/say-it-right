@@ -92,7 +92,7 @@
     return {
       kind: 'syllables',
       word: e.w,
-      ask: 'How many beats in this word?',
+      ask: 'How many syllables?',
       // the split stays hidden until the answer, or the question gives itself away
       question: whole(e.w),
       reveal: columns(e.syl, e.stress, true),
@@ -100,8 +100,8 @@
       speak: e.w,
       options: choices.map((c) => ({ label: String(c), correct: c === n })),
       told: `<strong>${e.syl.join(' &middot; ')}</strong>, so ${n} ` +
-            `${n === 1 ? 'beat' : 'beats'}.`,
-      how: `${e.syl.join(' &middot; ')}, ${n} ${n === 1 ? 'beat' : 'beats'}`,
+            `${n === 1 ? 'syllable' : 'syllables'}.`,
+      how: `${e.syl.join(' &middot; ')}, ${n} ${n === 1 ? 'syllable' : 'syllables'}`,
     };
   }
 
@@ -110,7 +110,7 @@
     return {
       kind: 'stress',
       word: e.w,
-      ask: 'Which beat is the strong one?',
+      ask: 'Which syllable is stressed?',
       question: columns(e.syl, -1, false),
       reveal: columns(e.syl, e.stress, true),
       pattern: patternOf(e.syl.length, e.stress),
@@ -118,7 +118,7 @@
       options: e.syl.map((s, i) => ({
         label: s, tap: ORDINAL[i], correct: i === e.stress,
       })),
-      told: `The strong beat is <strong>${e.syl[e.stress].toUpperCase()}</strong>: ` +
+      told: `The stress is on <strong>${e.syl[e.stress].toUpperCase()}</strong>: ` +
             e.syl.map((s, i) => (i === e.stress ? s.toUpperCase() : s)).join(' &middot; ') + '.',
       how: e.syl.map((s, i) => (i === e.stress ? s.toUpperCase() : s)).join(' &middot; '),
     };
