@@ -185,6 +185,39 @@ kbd {
 .credit { margin-top: 44px; font-size: 15px; color: var(--ink-soft); max-width: 60ch; }
 .credit p { margin: 0; }
 
+
+/* ---------------- how to play ----------------
+ * A quiet link that opens in place, so a substitute teacher or the students can
+ * run the game without being told how. */
+.howto { margin: -6px 0 0; }
+.howto summary {
+  display: inline-block; cursor: pointer;
+  font-size: 18px; color: var(--blue);
+  border-bottom: 1px solid var(--edge); padding-bottom: 1px;
+  list-style: none;
+}
+.howto summary::-webkit-details-marker { display: none; }
+.howto summary::after { content: " \203A"; }
+.howto[open] summary::after { content: " \2039"; }
+.howto summary:hover { border-bottom-color: var(--blue); }
+.howto-body {
+  margin-top: 16px; padding: 22px 26px;
+  background: var(--panel); border-radius: 16px;
+  max-width: 68ch;
+}
+.howto-body p { margin: 0 0 14px; font-size: 18px; color: var(--ink-soft); }
+.howto-body p:last-child { margin-bottom: 0; }
+.howto-body b { color: var(--ink); font-weight: 600; }
+.howto-body i { font-style: normal; font-weight: 600; color: var(--ink); }
+.howto-body h3 {
+  font-family: var(--display);
+  font-size: 21px; font-variation-settings: "wdth" 90, "wght" 700;
+  margin: 22px 0 10px; color: var(--ink);
+}
+.howto-body ul, .howto-body ol { margin: 0; padding-left: 22px; }
+.howto-body li { font-size: 18px; color: var(--ink-soft); margin-bottom: 9px; }
+.howto-body li:last-child { margin-bottom: 0; }
+
 /* ---------------- play ---------------- */
 .statusbar { display: flex; align-items: center; gap: 20px; flex-wrap: wrap; margin-bottom: 22px; }
 .status { font-size: 18px; color: var(--ink-soft); }

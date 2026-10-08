@@ -31,6 +31,9 @@ are listed again on the results screen for drilling.
 
 ## Using it in class
 
+The game carries its own **How to play** link under the Start button, so a substitute
+teacher or the students can run a round without being shown first.
+
 - **Projector:** open the page, pick the level, pick the game. Type is large by design.
 - **Two teams:** choose "Two teams" and the game alternates turns and keeps both scores.
 - **Keyboard:** <kbd>1</kbd>–<kbd>5</kbd> to answer, <kbd>Space</kbd> to hear the word
