@@ -144,7 +144,7 @@ for (const { id, name } of LEVELS) {
 console.log('\n--- two-team mode ---');
 const els = playRound('elementary', 'mixed', 6, 2);
 check(!els.turn.classList.contains('hidden'), 'two teams: turn indicator hidden');
-check(/Team A \d+ - \d+ Team B|A \d+ - \d+ B/.test(els.scores.textContent),
+check(/Team A \d+, Team B \d+/.test(els.scores.textContent),
   `two teams: unexpected score line "${els.scores.textContent}"`);
 check(/wins|draw/i.test(els.resultHead.textContent),
   `two teams: unexpected result "${els.resultHead.textContent}"`);

@@ -3,98 +3,115 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Say It Right - pronunciation, stress and syllables</title>
-<meta name="description" content="Classroom game for syllables, word stress and sound pairs. Beginner, Elementary and Pre-Intermediate.">
-<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🗣️</text></svg>">
+<title>mr shakir's Say It Right</title>
+<meta name="description" content="Pronunciation, word stress and syllable practice for Beginner, Elementary and Pre-Intermediate English classes.">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><circle cx='30' cy='50' r='12' fill='%231B49E0'/><circle cx='68' cy='50' r='24' fill='%23FFB01F'/></svg>">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wdth,wght@12..96,75..100,400..800&family=Lexend:wght@300..700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="styles.css">
 </head>
 <body>
 
 <!-- ============ setup ============ -->
 <section id="setup" class="screen">
-  <header class="brand">
+  <header class="masthead">
+    <p class="mr">mr shakir's</p>
     <h1>Say It Right</h1>
-    <p class="tag">Syllables, word stress and sound pairs. Built for class, works on the projector or on phones.</p>
+    <p class="tag">Hear the word. Count the beats. Find the strong one.</p>
   </header>
 
-  <div class="panel">
-    <h2>1. Level</h2>
-    <div id="levelPicks" class="picks"></div>
+  <form class="setup" id="setupForm">
+    <fieldset>
+      <legend>Which group is in the room?</legend>
+      <div id="levelPicks" class="picks"></div>
+    </fieldset>
 
-    <h2>2. Game</h2>
-    <div class="picks">
-      <button class="pick" data-mode="syllables">
-        <strong>Count the syllables</strong>
-        <span>ba &middot; na &middot; na = 3</span>
-      </button>
-      <button class="pick" data-mode="stress">
-        <strong>Find the stress</strong>
-        <span>ba &middot; <u>NA</u> &middot; na</span>
-      </button>
-      <button class="pick" data-mode="sounds">
-        <strong>Sound pairs</strong>
-        <span>ship or sheep?</span>
-      </button>
-      <button class="pick" data-mode="mixed">
-        <strong>Mixed</strong>
-        <span>all three</span>
-      </button>
-    </div>
+    <fieldset>
+      <legend>What are we practising?</legend>
+      <div class="picks">
+        <button type="button" class="pick" data-mode="syllables">
+          <span class="pick-demo"><i class="b s"></i><i class="b s"></i><i class="b s"></i></span>
+          <strong>Count the beats</strong>
+          <span class="pick-sub">ba na na, three</span>
+        </button>
+        <button type="button" class="pick" data-mode="stress">
+          <span class="pick-demo"><i class="b s"></i><i class="b l"></i><i class="b s"></i></span>
+          <strong>Find the strong beat</strong>
+          <span class="pick-sub">ba NA na</span>
+        </button>
+        <button type="button" class="pick" data-mode="sounds">
+          <span class="pick-demo pick-ipa">iː</span>
+          <strong>Tell the sounds apart</strong>
+          <span class="pick-sub">ship or sheep</span>
+        </button>
+        <button type="button" class="pick" data-mode="mixed">
+          <span class="pick-demo"><i class="b s"></i><i class="b l"></i><i class="b s"></i><i class="b s"></i></span>
+          <strong>All three</strong>
+          <span class="pick-sub">mixed round</span>
+        </button>
+      </div>
+    </fieldset>
 
-    <h2>3. Teams <span class="hint">optional</span></h2>
-    <div class="picks">
-      <button class="pick" data-teams="1"><strong>Whole class</strong><span>one score</span></button>
-      <button class="pick" data-teams="2"><strong>Two teams</strong><span>take turns</span></button>
-    </div>
+    <fieldset>
+      <legend>Playing as</legend>
+      <div class="picks picks-two">
+        <button type="button" class="pick" data-teams="1"><strong>One class</strong><span class="pick-sub">single score</span></button>
+        <button type="button" class="pick" data-teams="2"><strong>Two teams</strong><span class="pick-sub">taking turns</span></button>
+      </div>
+    </fieldset>
 
-    <div class="row">
-      <label for="qty">Questions</label>
+    <div class="settings">
+      <label for="qty">Words this round</label>
       <select id="qty">
-        <option value="6">6, quick</option>
+        <option value="6">6</option>
         <option value="10" selected>10</option>
-        <option value="16">16, longer</option>
+        <option value="16">16</option>
       </select>
-      <label class="check"><input type="checkbox" id="autoSpeak" checked> Say the word automatically</label>
+      <label class="switch"><input type="checkbox" id="autoSpeak" checked> Say each word for me</label>
     </div>
 
-    <button id="start" class="go">Start</button>
-    <p class="note">Keyboard: <kbd>1</kbd>-<kbd>5</kbd> answer &middot; <kbd>Space</kbd> hear it again &middot; <kbd>Enter</kbd> next</p>
-  </div>
+    <button type="button" id="start" class="go">Start the round</button>
+    <p class="keys">On the teacher's laptop: <kbd>1</kbd>–<kbd>5</kbd> answers, <kbd>space</kbd> repeats the word, <kbd>enter</kbd> moves on.</p>
+  </form>
 
   <footer class="credit">
-    <p>Word lists follow the levels of <em>English File</em>. Unofficial, not affiliated with or endorsed by Oxford University Press.</p>
+    <p>Levels follow Beginner, Elementary and Pre-Intermediate. An independent teaching aid, with no material from any coursebook.</p>
   </footer>
 </section>
 
 <!-- ============ play ============ -->
 <section id="play" class="screen hidden">
-  <div class="bar">
-    <span id="progress" class="chip"></span>
-    <span id="turn" class="chip hidden"></span>
-    <span id="scores" class="chip"></span>
-    <button id="quit" class="quit">End</button>
+  <div class="statusbar">
+    <span id="progress" class="status"></span>
+    <span id="turn" class="status turn hidden"></span>
+    <span id="scores" class="status"></span>
+    <button id="quit" class="quit">Finish early</button>
   </div>
 
-  <div id="card" class="card">
-    <p id="prompt" class="prompt"></p>
-    <div id="display" class="display"></div>
-    <button id="speak" class="speak" title="Hear the word (Space)">Hear it</button>
-    <div id="options" class="options"></div>
-    <p id="feedback" class="feedback"></p>
-    <button id="next" class="go hidden">Next</button>
+  <div class="stage">
+    <p id="prompt" class="ask"></p>
+    <div id="display" class="word"></div>
+    <p id="pattern" class="pattern"></p>
+    <button id="speak" class="again">Hear it again</button>
   </div>
+
+  <div id="options" class="keypad"></div>
+  <p id="feedback" class="verdict"></p>
+  <button id="next" class="go hidden">Next word</button>
 </section>
 
 <!-- ============ results ============ -->
 <section id="results" class="screen hidden">
-  <div class="panel">
+  <div class="scorecard">
     <h2 id="resultHead"></h2>
-    <p id="resultLine" class="big"></p>
-    <div id="review"></div>
-    <div class="row">
-      <button id="again" class="go">Play again</button>
-      <button id="change" class="ghost">Change level or game</button>
-    </div>
+    <p id="resultLine" class="tally"></p>
+  </div>
+  <h3 id="reviewHead" class="review-head">Worth saying again together</h3>
+  <div id="review" class="review"></div>
+  <div class="endbuttons">
+    <button id="again" class="go">Another round</button>
+    <button id="change" class="ghost">Change group or game</button>
   </div>
 </section>
 

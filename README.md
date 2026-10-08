@@ -1,4 +1,4 @@
-# Say It Right
+# mr shakir's Say It Right
 
 A classroom game for **pronunciation, word stress and syllables**, built for three
 groups at Beginner, Elementary and Pre-Intermediate level. It runs in the browser,
@@ -6,18 +6,24 @@ needs no installation and no internet once the page has loaded.
 
 **Play it here:** https://gunjuzone.github.io/say-it-right/
 
+![The stress game revealing the strong beat in "photographic"](docs/screenshot.png)
+
+The design follows how stress is taught at the board: syllables are beats, each beat
+gets a bubble, and the strong beat is the big one. The answer screen also shows the
+`oOo` pattern, so students read the shape of the word as well as the letters.
+
 ## The three games
 
 | Game | What students do | Teaches |
 |---|---|---|
-| **Count the syllables** | Hear and see a word, choose how many syllables | Syllable awareness |
-| **Find the stress** | The word is split into syllables, choose the stressed one | Word stress |
-| **Sound pairs** | A sound is shown, for example /iː/ as in "tree", choose the word that has it | Minimal pairs, vowel and consonant contrasts |
+| **Count the beats** | Hear and see a word, choose how many syllables | Syllable awareness |
+| **Find the strong beat** | The word appears in syllables, choose the stressed one | Word stress |
+| **Tell the sounds apart** | A sound is shown, for example /iː/ as in "tree", choose the word that has it | Minimal pairs, vowel and consonant contrasts |
 | **Mixed** | All three, alternating | Review |
 
-After each answer the game shows the full answer, for example
-`ba · NA · na`, so the class sees the pattern rather than only right or wrong.
-Words that were missed are listed again on the results screen for drilling.
+After each answer the word opens into its syllables with the strong beat marked, so
+the class sees the pattern rather than only right or wrong. Words that were missed
+are listed again on the results screen for drilling.
 
 ## Using it in class
 
